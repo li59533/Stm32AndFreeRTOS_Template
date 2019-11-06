@@ -59,13 +59,7 @@
  * @brief         
  * @{  
  */
-typedef struct 
-{
-    GPIO_TypeDef * GPIOx;
-    GPIO_InitTypeDef GPIO_Init;
-    GPIO_PinState Begin_status;
-    /* data */
-}BSP_GPIO_Instance_t;
+
 /**
  * @}
  */

@@ -17,7 +17,7 @@
  * @addtogroup    XXX 
  * @{ 
  */
-
+#include "stm32l4xx_bsp_conf.h"
 /**
  * @addtogroup    stm32l4xx_bsp_gpio_Modules 
  * @{  
@@ -45,7 +45,13 @@
  * @defgroup      stm32l4xx_bsp_gpio_Exported_Types 
  * @{  
  */
-
+typedef struct 
+{
+    GPIO_TypeDef * GPIOx;
+    GPIO_InitTypeDef GPIO_Init;
+    GPIO_PinState Begin_status;
+    /* data */
+}BSP_GPIO_Instance_t;
 /**
  * @}
  */

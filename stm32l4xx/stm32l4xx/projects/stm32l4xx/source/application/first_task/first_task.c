@@ -108,14 +108,15 @@
 void First_Task(void * pvParameter)
 {
 	DEBUG("First Task Enter\r\n");
-
+	UBaseType_t firsttask_ramainheap = 0;
 	while(1)
 	{
 		DEBUG("First Task Looping\r\n");
 		Bsp_LedToggle(BSP_LED_TEST);
         
+		firsttask_ramainheap = uxTaskGetStackHighWaterMark(NULL);
         
-        
+		DEBUG("First Task ramain heap:%d %%\r\n",firsttask_ramainheap);
         vTaskDelay(pdMS_TO_TICKS(1000));
 		
 	}
